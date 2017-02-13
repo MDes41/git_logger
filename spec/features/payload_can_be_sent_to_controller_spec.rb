@@ -35,10 +35,12 @@ describe 'Payload' do
 
 			conn = Faraday.new(url: 'http://localhost:3000/api/v1/commits')
 
-			conn.post do |req|
-				req.headers = headers
-			  req.body = payload_body
-			end
+			response = conn.post do |req|
+										req.headers = headers
+									  req.body = payload_body
+									end
+
+			expect(response.status).to eq(200)
 
 		end
 	end

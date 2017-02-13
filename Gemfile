@@ -40,6 +40,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'faraday'
   gem 'heroku'
+  gem 'json'
 end
 
 group :development do
