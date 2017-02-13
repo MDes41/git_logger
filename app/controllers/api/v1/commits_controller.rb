@@ -8,7 +8,7 @@ class Api::V1::CommitsController < ApplicationController
 
 
 	def create
-		puts 'HHHLHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH' + body_params
+		puts body_params
 		render json: "Hello World", status: 200
 	end
 
