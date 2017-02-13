@@ -8,7 +8,13 @@ class Api::V1::CommitsController < ApplicationController
 
 
 	def create
-		puts JSON.parse(params[:payload])
+		payload = JSON.parse(params[:payload])
+		author = payload[:head_commit][:author][:username]
+		message = payload[:head_commit][:message]
+		id = payload[:head_commit][:id]
+		timestamp = payload[:head_commit][:timestamp]
+
+	
 		render json: "Hello World", status: 200
 	end
 
